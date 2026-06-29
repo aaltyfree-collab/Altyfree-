@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول</title>
+
+  <style>
+    body{
+      font-family: Arial;
+      background:#c62828;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+    }
+
+    .box{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      width:300px;
+      text-align:center;
+    }
+
+    input{
+      width:100%;
+      padding:10px;
+      margin:10px 0;
+    }
+
+    button{
+      width:100%;
+      padding:10px;
+      background:#c62828;
+      color:white;
+      border:none;
+      cursor:pointer;
+    }
+
+    .error{
+      color:red;
+      margin-top:10px;
+      display:none;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>صيدلية الميسم</h2>
+
+  <input id="username" placeholder="اسم المستخدم">
+  <input id="password" type="password" placeholder="كلمة المرور">
+
+  <button onclick="login()">دخول</button>
+
+  <div class="error" id="error">بيانات غير صحيحة</div>
+</div>
+
+<script>
+  // 👇 مستخدمين + كلمة مرور واحدة
+  const users = ["Eltayeb", "Maysam"];
+  const password = "Am123580";
+
+  function login(){
+    let user = document.getElementById("username").value.trim();
+    let pass = document.getElementById("password").value.trim();
+    let error = document.getElementById("error");
+
+    if(users.includes(user) && pass === password){
+      localStorage.setItem("user", user);
+      window.location.href = "admin.html";
+    } else {
+      error.style.display = "block";
+    }
+  }
+
+  // منع دخول مباشر
+  if(localStorage.getItem("user")){
+    window.location.href = "admin.html";
+  }
+</script>
+
+</body>
+</html>

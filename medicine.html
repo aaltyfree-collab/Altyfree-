@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تفاصيل الدواء - صيدلية الميسم للطوارئ</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-logo">+</div>
+        <div>
+          <h1>صيدلية الميسم للطوارئ</h1>
+          <p>القضارف • 24 ساعة</p>
+        </div>
+      </a>
+
+      <nav class="main-nav static-nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="medicines.html">الأدوية</a>
+        <a href="admin.html">لوحة التحكم</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div id="medicineDetailsContainer"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 صيدلية الميسم للطوارئ</p>
+      <a href="medicines.html">العودة للأدوية</a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/medicine-details.js"></script>
+</body>
+</html>
+
+<button onclick="logout()">تسجيل خروج</button>
+
+<script>
+function logout(){
+  localStorage.removeItem("user");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html

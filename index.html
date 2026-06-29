@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  </body>
+</html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صيدلية الميسم للطوارئ</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-logo">+</div>
+        <div>
+          <h1>صيدلية الميسم للطوارئ</h1>
+          <p>القضارف • 24 ساعة</p>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="active">الرئيسية</a>
+        <a href="medicines.html">الأدوية</a>
+        <a href="#services">الخدمات</a>
+        <a href="#prescription">رفع وصفة</a>
+        <a href="#contact">تواصل معنا</a>
+        <a href="admin.html" class="admin-link">لوحة التحكم</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">صيدلية بشرية • خدمة طوارئ</span>
+        <h2>كل الأدوية البشرية في مكان واحد</h2>
+        <p>
+          موقع صيدلية الميسم للطوارئ لتصفح الأدوية، البحث السريع، رفع الوصفات،
+          والتواصل المباشر عبر واتساب على مدار 24 ساعة.
+        </p>
+
+        <div class="hero-actions">
+          <a href="medicines.html" class="btn btn-primary">تصفح الأدوية</a>
+          <a href="https://wa.me/249113221887" target="_blank" class="btn btn-outline">اطلب عبر واتساب</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong id="heroMedicineCount">0</strong>
+            <span>دواء بالموقع</span>
+          </div>
+          <div class="stat">
+            <strong>24/7</strong>
+            <span>خدمة طوارئ</span>
+          </div>
+          <div class="stat">
+            <strong>واتساب</strong>
+            <span>طلب واستفسار</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card card">
+        <h3>بحث سريع عن دواء</h3>
+        <p class="muted">اكتب اسم الدواء وسيتم نقلك إلى صفحة الأدوية مع نتائج البحث.</p>
+
+        <form id="homeSearchForm" class="search-form">
+          <input type="text" id="homeSearchInput" placeholder="مثال: Panadol أو Amoxicillin" />
+          <button type="submit" class="btn btn-primary">بحث</button>
+        </form>
+
+        <div class="quick-tags">
+          <button class="tag-btn" data-search="Panadol">Panadol</button>
+          <button class="tag-btn" data-search="Amoxicillin">Amoxicillin</button>
+          <button class="tag-btn" data-search="Vitamin C">Vitamin C</button>
+          <button class="tag-btn" data-search="Metformin">Metformin</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">الأدوية</span>
+          <h2>أحدث الأدوية المضافة</h2>
+        </div>
+        <a href="medicines.html" class="text-link">عرض الكل ←</a>
+      </div>
+
+      <div class="grid cards-grid" id="featuredMedicines"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-head center">
+        <div>
+          <span class="section-kicker">الخدمات</span>
+          <h2>خدمات صيدلية الميسم للطوارئ</h2>
+        </div>
+      </div>
+
+      <div class="grid services-grid">
+        <article class="card service-card">
+          <div class="service-icon">💊</div>
+          <h3>توفير الأدوية البشرية</h3>
+          <p>عرض الأدوية والبحث عنها حسب الاسم أو التصنيف أو الشركة.</p>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">📋</div>
+          <h3>رفع وصفة طبية</h3>
+          <p>إرسال بيانات الوصفة وطلب الدواء مباشرة عبر واتساب.</p>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">🚑</div>
+          <h3>خدمة طوارئ 24 ساعة</h3>
+          <p>استقبال الطلبات والاستفسارات طوال اليوم داخل القضارف.</p>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon">🔎</div>
+          <h3>بحث ذكي</h3>
+          <p>الوصول للدواء بسرعة من خلال البحث المباشر داخل الموقع.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="prescription">
+    <div class="container narrow">
+      <div class="section-head center">
+        <div>
+          <span class="section-kicker">الوصفات الطبية</span>
+          <h2>رفع وصفة أو إرسال طلب دواء</h2>
+        </div>
+      </div>
+
+      <div class="card form-card">
+        <form id="prescriptionForm" class="stack-form">
+          <div class="form-grid">
+            <div class="field">
+              <label for="customerName">اسم العميل</label>
+              <input type="text" id="customerName" required />
+            </div>
+
+            <div class="field">
+              <label for="customerPhone">رقم الهاتف</label>
+              <input type="tel" id="customerPhone" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="prescriptionText">تفاصيل الوصفة / أسماء الأدوية</label>
+            <textarea id="prescriptionText" rows="5" placeholder="اكتب أسماء الأدوية المطلوبة أو ملاحظات الوصفة"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="prescriptionImageNote">صورة الوصفة</label>
+            <input type="file" id="prescriptionImageNote" disabled />
+            <small class="muted">
+              رفع الصورة الفعلي يحتاج ربط Back-end أو خدمة رفع ملفات. حالياً الإرسال يتم عبر واتساب بالنص.
+            </small>
+          </div>
+
+          <button type="submit" class="btn btn-primary full">إرسال عبر واتساب</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-head center">
+        <div>
+          <span class="section-kicker">تواصل معنا</span>
+          <h2>معلومات الصيدلية</h2>
+        </div>
+      </div>
+
+      <div class="grid contact-grid">
+        <article class="card contact-card">
+          <h3>اسم الصيدلية</h3>
+          <p>صيدلية الميسم للطوارئ</p>
+        </article>
+
+        <article class="card contact-card">
+          <h3>الموقع</h3>
+          <p>القضارف</p>
+        </article>
+
+        <article class="card contact-card">
+          <h3>ساعات العمل</h3>
+          <p>24 ساعة</p>
+        </article>
+
+        <article class="card contact-card">
+          <h3>واتساب</h3>
+          <p dir="ltr">+249113221887</p>
+          <a href="https://wa.me/249113221887" target="_blank" class="btn btn-primary small">فتح واتساب</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© 2026 صيدلية الميسم للطوارئ - جميع الحقوق محفوظة</p>
+      <a href="admin.html">لوحة التحكم</a>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/249113221887" target="_blank" class="floating-whatsapp">واتساب</a>
+</body>
+</html>
+
+<button onclick="logout()">تسجيل خروج</button>
+
+<script>
+function logout(){
+  localStorage.removeItem("user");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html
